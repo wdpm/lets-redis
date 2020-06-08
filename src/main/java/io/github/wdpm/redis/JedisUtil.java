@@ -16,9 +16,13 @@ public class JedisUtil {
     private static final JedisPool pool = new JedisPool(redisHost, redisPort);
 
     private JedisUtil() {
-
     }
 
+    /**
+     * must call Jedis.close() after using.
+     *
+     * @return
+     */
     public static Jedis getRedis() {
         return pool.getResource();
     }
