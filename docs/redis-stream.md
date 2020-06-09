@@ -35,8 +35,6 @@ xlen s1
 xrange s1 - +
 
 xdel s1 1527849609889-0
-# len 不受影响
-xlen s1
 
 # 删除整个 Stream
 del s1

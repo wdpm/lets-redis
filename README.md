@@ -13,7 +13,7 @@
 - 大海捞针：[redis scan](\docs\redis-scan.md)
 
 ### 实践篇
-- [秒杀活动]TODO
+- [秒杀活动] => set 为资格 + 限流 TODO
 
 ### 原理篇
 - [redis 线程I/O模型](\docs\redis-thread-io-model.md) => 多路复用+ 非阻塞IO
@@ -25,27 +25,28 @@
 - [redis 5.0+ Stream](\docs\redis-stream.md) => 支持多播的可持久化的消息队列
 
 ### 高可用
-- [redis 复制](\docs\redis-replication.md) => 主从同步+读写分离 TODO
-- [redis sentinel](\docs\redis-sentinel.md) TODO
-- [redis 集群](\docs\redis-cluster.md) TODO
+- [redis 复制](\docs\redis-replication.md) => 主从同步+读写分离 
+- [redis sentinel](\docs\redis-sentinel.md) 
+- [redis 集群](\docs\redis-cluster.md) 
 
 ### 拓展篇
 - [redis info指令](\docs\redis-info.md)
-- redis 集群下的分布式锁 => redlock
 - 朝生暮死：[redis 过期策略](\docs\redis-expire-strategy.md) => 定时删除+惰性删除
 - 优胜劣汰：[redis LRU策略](\docs\redis-lru.md) => 传统LRU + 随机采样
 - 妙手仁心：[优雅的jedis](.\src\main\java\io\github\wdpm\redis\jedis\RedisPool.java)
 
 ### 源码篇
+- [阅读 Redis 源码的顺序参考](\docs\source-code\read-code-order.md)
 - string 的背后 => [sds](\docs\source-code\sds.md)
-- list 的背后 => [ziplist](\docs\source-code\ziplist.md) + linkedlist   
-- hash 的背后 => ziplist + [hashtable](\docs\source-code\dict.md) 
-- set 的背后 => [intset](\docs\source-code\intset.md) + hashtable   
-- zset 的背后 => ziplist + [zskiplist](\docs\source-code\zskiplist.md)   
-- stream 的背后 => listpack + Rax
-- [redis object](\docs\source-code\redis-object.md) TODO
+- list 的背后 => [ziplist](\docs\source-code\ziplist.md) / linkedlist   
+- hash 的背后 => ziplist / [dict](\docs\source-code\dict.md) 
+- set 的背后 => [intset](\docs\source-code\intset.md) / dict   
+- zset 的背后 => ziplist / ([zskiplist](\docs\source-code\zskiplist.md) + dict )
+- stream 的背后 => listpack + rax
+- [redis object](\docs\source-code\redis-object.md) 
 
-### 深入阅读
+### 参考阅读
 - redis 官网
+- 《Redis 深度历险》
+- 《Redis 设计与实现（第二版）》
 - [redis-under-the-hood](https://pauladamsmith.com/articles/redis-under-the-hood.html) 
-- 深入理解 RPC : 基于 Python 自建分布式高并发 RPC 服务 

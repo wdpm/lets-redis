@@ -1,4 +1,4 @@
-# redis HyperLogLog
+err# redis HyperLogLog
 划重点：解决精确度不高的统计需求。
 
 ## 场景
