@@ -38,10 +38,10 @@
 ### 源码篇
 - [阅读 Redis 源码的顺序参考](/docs/source-code/read-code-order.md)
 - string 的背后 => [sds](/docs/source-code/sds.md)
-- list 的背后 => [ziplist](/docs/source-code/ziplist.md) / linkedlist   
-- hash 的背后 => ziplist / [dict](/docs/source-code/dict.md) 
-- set 的背后 => [intset](/docs/source-code/intset.md) / dict   
-- zset 的背后 => ziplist / ([zskiplist](/docs/source-code/zskiplist.md) + dict )
+- list 的背后 => quicklist([ziplist](/docs/source-code/ziplist.md) / linkedlist)
+- hash 的背后 => ziplist / hashtable([dict](/docs/source-code/dict.md))
+- set 的背后 => [intset](/docs/source-code/intset.md) / hashtable(dict)  
+- zset 的背后 => ziplist / skiplist([zskiplist](/docs/source-code/zskiplist.md) + dict)
 - stream 的背后 => listpack + rax
 - [redis object](/docs/source-code/redis-object.md) 
 
