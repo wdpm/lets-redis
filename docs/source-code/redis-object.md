@@ -1,4 +1,4 @@
-# bredis object
+# redis object
 > redis-5.0.7/src/server.h:464
 ```c
 /* A redis object, that is a type able to hold a string / list / set */
